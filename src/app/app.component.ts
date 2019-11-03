@@ -19,6 +19,9 @@ export class AppComponent {
     this.dataService.getProductToCart().subscribe(()=>{
       this.count=this.dataService.getCartItemsCount();
     });
+    this.dataService.getClearCartDetails().subscribe(()=>{
+      this.count=this.dataService.getCartItemsCount();
+    });
 
     router.navigate(['']);
   }

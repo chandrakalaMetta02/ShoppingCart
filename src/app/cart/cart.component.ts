@@ -23,9 +23,16 @@ export class CartComponent implements OnInit {
   ngOnInit() {}
 
   /**
+   * Invok this method to clear cart
+   */
+  clearCartDeatils(){
+    this.dataService.clearCartDetails();
+  }
+  /**
    * Call this method to shoe checkout products
    */
   checkoutProducts(){
+    this.clearCartDeatils();
     alert("Placed Order successfully with "+Math.floor(Math.random() * Math.floor(3)));
     
   }
