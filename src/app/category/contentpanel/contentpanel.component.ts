@@ -14,6 +14,12 @@ export class ContentpanelComponent implements OnInit {
 
   seletedCategory:any;
   productsData:Product[];
+
+  /**
+   * 
+   * @param dataService Service for the getter/setting methods for the component communication
+   * Subscribing the services and configuring the values
+   */
   constructor(private dataService:DataService) { 
     this.dataService.getSelectedcategory().
     subscribe((category)=>{
@@ -25,9 +31,13 @@ export class ContentpanelComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
+
+  /**
+   * 
+   * @param category category name
+   * Invoke this method to get the products based the selection of categories
+   */
   getProductsByCategory(category){
     let productsSubscription=this.dataService.getProductsByCategory(category).
       subscribe((products:Product[])=>{
@@ -40,6 +50,12 @@ export class ContentpanelComponent implements OnInit {
       productsSubscription.unsubscribe();
     })
   }
+
+   /**
+   * 
+   * @param product product
+   * Invoke this method to add the product in cart page
+   */
   addItemToCart(product){
     this.dataService.setProductToCart(product);
   }

@@ -6,7 +6,13 @@
             <div class="item-cls">
                 
                 <p-panel [header]="product.name">
-                    <div class="product-detail"><span>{{product.name}}( {{product.count}} items)</span><span class="remove-item-label">Remove item</span></div>
+                    <div class="product-detail">
+                        <span>{{product.name}}( {{product.count}} items)</span>
+                        <span class="remove-item-label">Remove item</span>
+                    </div>
+                    <div class="product-detail">
+                            {{product.caategory}}
+                        </div>
                     <img [src]="'/assets/images/'+product.image" width="60" alt="No Image Availables">
                     <div class="price-cls">Item Price : ${{product.price}}</div>
                     <div class="total-item-cost-cls">Total {{product.name}} items cost : ${{product.price * (product.count ? product.count : 1) }}</div>

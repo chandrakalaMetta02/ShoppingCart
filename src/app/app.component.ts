@@ -8,8 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sampleApp';
+
   count:number=0;
+
+   /**
+   * @param dataService 
+   * Service for the getter/setting methods for the component communication
+   */
   constructor(private dataService:DataService,router:Router) {
     this.dataService.getProductToCart().subscribe(()=>{
       this.count=this.dataService.getCartItemsCount();
@@ -17,8 +22,6 @@ export class AppComponent {
 
     router.navigate(['']);
   }
-  ngOnInit(){
-    
-  }
+  ngOnInit(){}
 
 }

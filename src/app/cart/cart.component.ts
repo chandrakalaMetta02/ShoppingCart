@@ -7,17 +7,31 @@ import { DataService } from '../providers/data.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+
+
   cartedProducts:any=[];
+
+  /**
+   * 
+   * @param dataService Service for the getter/setting methods for the component communication
+   * Subscribing the services and configuring the values
+   */
   constructor(private dataService:DataService) {
     this.cartedProducts=this.dataService.getCartedProducts();
   }
   
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
+  /**
+   * Call this method to shoe checkout products
+   */
   checkoutProducts(){
-    alert("Placed Order successfully");
+    alert("Placed Order successfully with "+Math.floor(Math.random() * Math.floor(3)));
     
   }
+  /**
+   * Call this method while changing the no of itemms count for the products
+   */
   changeCartedValue(e,product){
     console.log(e)
     if(!product.count){
@@ -31,6 +45,10 @@ export class CartComponent implements OnInit {
     }
     product.types[1]={label:product.count.toString(),value:product.count.toString()};
   }
+
+  /**
+   * Call this method to the types to show as split button labels
+   */
   getTypes(product){
     return product.types? product.types :[];
   }

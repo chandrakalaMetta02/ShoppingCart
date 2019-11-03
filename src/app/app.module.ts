@@ -13,7 +13,6 @@ import { CartComponent } from './cart/cart.component';
 import { SidebarComponent } from './category/sidebar/sidebar.component';
 import { ContentpanelComponent } from './category/contentpanel/contentpanel.component';
 import { CategoryComponent } from './category/category.component';
-//import { RouterModule } from '@angular/router';
 import {SelectButtonModule} from 'primeng/selectbutton';
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import {SelectButtonModule} from 'primeng/selectbutton';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-   /// RouterModule,
     AppRoutingModule,
     HttpClientModule,
     DropdownModule,

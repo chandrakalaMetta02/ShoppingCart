@@ -19,13 +19,26 @@ export class DataService extends BaseService{
   }
 
   private selectedCategory$=new Subject();
+
+  /**
+   * To get the selected category
+  */
   getSelectedcategory(){
     return this.selectedCategory$.asObservable();
   }
+
+  /**
+   * @param category
+   * To set/update the selected category
+  */
   setSelectedcategory(category){
     this.selectedCategory$.next(category)
   }
 
+  /**
+   * * @param category
+   * To get the products based on category data
+   */
   getProductsByCategory(category){
     let url="/assets/data/products.json";
     return this._makeRequest(url,null,'GET')
@@ -50,21 +63,41 @@ export class DataService extends BaseService{
      
   }
   addProductToCart$=new Subject();
+
+  
+  /**
+   * To get carted products count
+   */
   getCartItemsCount(){
     return this.cartedProducts.length;
   }
   cartedProducts=[];
+
+  /**
+   * To add product to cart page and store the carted products
+   */
   setProductToCart(product){
     this.cartedProducts.push(product);
     this.addProductToCart$.next(product);
     
   }
+  /**
+   * will be use for ssubscriptions
+   */
   getProductToCart(){
     return  this.addProductToCart$.asObservable();
   }
+
+   /**
+   * To remove product to cart page and store the carted products
+   */
   removeProductFromCart(product){
     this.cartedProducts=this.cartedProducts.filter((item)=>{item.id !== product.id});
   }
+
+   /**
+   * To get  carted products 
+   */
   getCartedProducts(){
     return this.cartedProducts;
   }
