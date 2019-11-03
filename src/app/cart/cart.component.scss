@@ -1,0 +1,54 @@
+app-cart{
+    height: 100%;
+    width: 100%;
+   
+}
+
+.add-remove-cls{
+    float:right;
+}
+.item-cls{
+    border: 1px solid gray;
+    padding:.5em;
+    position:relative;
+}
+.checkout-btn-cls{
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    background-color: #007ad9;
+    border: 1px solid #007ad9;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+.total-item-cost-cls{
+    float:right;
+    position:absolute;
+    top:30%;
+    right:3%;
+    color:green;
+}
+.price-cls{
+    color:red;
+}
+.cart-cancel-cls {
+    height: 50px;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 900;
+    width: 200px;
+    margin: auto;
+    margin-left: 20px;
+    background: red;
+    border:none;
+}
+.remove-item-label{
+    float: right;
+    color: red;
+}

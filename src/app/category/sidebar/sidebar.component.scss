@@ -1,0 +1,25 @@
+.category-header{
+    font-size: 1.3em;
+    margin: 10px;
+    color: red;
+    text-transform: uppercase;
+}
+.category-cls{
+    padding: 5px;
+    font-size: 1.2em;
+    /* border: 1px solid grey; */
+    background-color: lightgray;
+    color: black;
+    margin:5px;
+    cursor: pointer;
+    text-align:center;
+}
+.category-cls:active,.selected-cls{
+    background-color: #007ad9;;
+    color: white;
+    border: 1px solid;
+}
+.category-cls:hover{
+    border: 2px solid #007ad9;
+}
+

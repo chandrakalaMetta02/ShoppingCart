@@ -1,0 +1,51 @@
+
+
+
+ 
+
+  .toolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #007ad9;
+    color: white;
+    font-weight: 600;
+    .spacer {
+      flex: 1;
+    }
+    .header-cls{
+      font-size: 2em;
+    }
+    .cart-cls{
+      margin-right: 10px;
+      .pi-shopping-cart{
+        font-size: 2.5em !important;
+      }
+      .cart-btn-cls{
+        position: relative;
+      }
+      .badge-cls{
+        background-color:white;
+        border-radius:50%;
+        border:1px solid white;
+        height:10px;
+        width:10px;
+        position:absolute;
+        color:#007ad9;
+        font-size: 7px;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+  .main{
+    height: calc(100% - 60px);
+    // display: flex;
+    .router-cls{
+      height:100%;
+      width:100%;
+    }
+    
+  }
+  
+

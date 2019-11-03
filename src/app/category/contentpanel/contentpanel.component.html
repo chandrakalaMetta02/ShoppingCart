@@ -1,0 +1,17 @@
+
+<p-dataView class="data-view-cls" #dv [value]="productsData" [loading]="loading">
+
+<ng-template let-product pTemplate="listItem">
+    <div style="padding:.5em" class="item-cls">
+        <p-panel [header]="product.name" [style]="{'text-align':'center'}">
+            <img [src]="'/assets/images/'+product.image" width="60" alt="No Image Availables">
+            <div class="product-detail"><span>{{product.name}}</span></div>
+            <div>Price : <span>${{product.price}}</span></div>
+        </p-panel>
+        <div class="cart-label-cls">
+            <a href=# (click)=addItemToCart(product)> Add to cart</a>
+        </div>
+    </div>
+</ng-template>
+
+</p-dataView>

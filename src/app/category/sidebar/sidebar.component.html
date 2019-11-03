@@ -1,0 +1,8 @@
+<div>
+    <div 
+        class="category-cls" 
+        *ngFor="let category of categories" 
+        [ngClass]="{'selected-cls':selectedCategory == category}"
+        (click)=selectCaegory(category)>{{category}}
+    </div>
+</div>

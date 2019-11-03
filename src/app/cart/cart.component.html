@@ -1,0 +1,25 @@
+
+
+<p-dataView class="data-view-cls"  [value]="cartedProducts" [loading]="loading">
+
+        <ng-template let-product pTemplate="listItem">
+            <div class="item-cls">
+                
+                <p-panel [header]="product.name">
+                    <div class="product-detail"><span>{{product.name}}( {{product.count}} items)</span><span class="remove-item-label">Remove item</span></div>
+                    <img [src]="'/assets/images/'+product.image" width="60" alt="No Image Availables">
+                    <div class="price-cls">Item Price : ${{product.price}}</div>
+                    <div class="total-item-cost-cls">Total {{product.name}} items cost : ${{product.price * (product.count ? product.count : 1) }}</div>
+                    <div class="add-remove-cls">
+                            <p-selectButton (onChange)="changeCartedValue($event,product)" 
+                            [options]="getTypes(product)" ></p-selectButton>
+                    </div>
+                </p-panel>
+                
+            </div>
+        </ng-template>
+        <p-footer>
+            <button routerLink="" class="checkout-btn-cls" (click)="checkoutProducts()">Checkout Carted Items</button>
+            <button routerLink="" class="cart-cancel-cls ui-button-danger">Cancel</button>
+        </p-footer>
+        </p-dataView>

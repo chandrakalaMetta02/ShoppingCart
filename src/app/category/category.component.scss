@@ -1,0 +1,18 @@
+
+.category-cls{
+    .sidebar{
+        width:20%;
+        border-right:1px solid grey;
+        display: inline-block;
+    }
+    .content-panel{
+        width:80%;
+        display: inline-block;
+        overflow-y: auto;
+    }
+    height:100%; width:100%;
+    display: flex;
+}
+app-category{
+    width: 100%;
+}

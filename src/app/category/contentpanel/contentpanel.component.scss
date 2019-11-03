@@ -1,0 +1,22 @@
+.data-view-cls{
+    .item-cls{
+        width: 30% !important;
+        float: left;
+        clear: both;
+        border: 1px solid lightgray;
+        margin: 10px;
+        border-radius: 01em;
+        position: relative;
+    }
+    .cart-label-cls{
+        position: absolute;
+    top: 47%;
+    right: 20%;
+    }
+    
+}
+.ui-dataview .ui-dataview-content{
+    border-bottom: 0px !important;
+}
+
+
